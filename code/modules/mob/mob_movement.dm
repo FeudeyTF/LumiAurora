@@ -220,6 +220,17 @@
 		if ((A != src.loc && A && A.z == src.z))
 			src.last_move = get_dir(A, src.loc)
 
+/atom/movable/proc/set_glide_size(glide_size_override = 0, min = 0.9, max = world.icon_size/2)
+	if (!glide_size_override || glide_size_override > max)
+		glide_size = 0
+	else
+		glide_size = max(min, glide_size_override)
+	if(istype(src, /mob/))
+		var/mob/mob = src
+		mob.pulling.set_glide_size(glide_size_override, min, max)
+	for (var/atom/movable/atom_mov in contents)
+		atom_mov.set_glide_size(glide_size, min, max)
+
 /client/proc/Move_object(direct)
 	if(mob && mob.control_object)
 		if(mob.control_object.density)
@@ -384,10 +395,13 @@
 			//If we're sprinting and able to continue sprinting, then apply the sprint bonus ontop of this
 			if (H.m_intent == M_RUN && (H.status_flags & GODMODE || H.species.handle_sprint_cost(H, tally, TRUE))) //This will return false if we collapse from exhaustion
 				sprint_tally = tally
+				mob.set_glide_size(6)
 				tally = (tally / (1 + H.sprint_speed_factor)) * GLOB.config.run_delay_multiplier
 			else if (H.m_intent == M_LAY && (H.status_flags & GODMODE || H.species.handle_sprint_cost(H, tally, TRUE)))
+				mob.set_glide_size(3)
 				tally = (tally / (1 + H.lying_speed_factor)) * GLOB.config.lying_delay_multiplier
 			else
+				mob.set_glide_size(3)
 				tally = max(tally * GLOB.config.walk_delay_multiplier, H.min_walk_delay) //clamp walking speed if its limited
 		else
 			tally *= GLOB.config.walk_delay_multiplier
