@@ -227,7 +227,8 @@
 		glide_size = max(min, glide_size_override)
 	if(istype(src, /mob/))
 		var/mob/mob = src
-		mob.pulling.set_glide_size(glide_size_override, min, max)
+		if(mob.pulling)
+			mob.pulling.set_glide_size(glide_size_override, min, max)
 	for (var/atom/movable/atom_mov in contents)
 		atom_mov.set_glide_size(glide_size, min, max)
 
