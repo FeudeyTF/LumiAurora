@@ -369,7 +369,7 @@ macro "macro"
 		name = "F3"
 		command = ".say"
 	elem
-		name = "U"
+		name = "SHIFT+T"
 		command = ".whis"
 	elem
 		name = "F4"
@@ -591,7 +591,7 @@ macro "hotkeymode"
 		name = "T"
 		command = ".say"
 	elem
-		name = "U"
+		name = "SHIFT+T"
 		command = ".whis"
 	elem "w_key"
 		name = "W+REP"
@@ -654,7 +654,7 @@ macro "hotkeymode"
 		name = "F3"
 		command = ".say"
 	elem
-		name = "U"
+		name = "SHIFT+T"
 		command = ".whis"
 	elem
 		name = "F4"
