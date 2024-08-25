@@ -719,6 +719,9 @@ macro "hotkeymode"
 	elem
 		name = "-"
 		command = "Move-Down"
+	elem
+		name = "SPACE"
+		command = "switch-move"
   elem
     name = "R"
     command = "throw_intent_toggle"
