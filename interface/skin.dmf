@@ -171,6 +171,9 @@ macro "borghotkeymode"
 		name = "F2"
 		command = ".ooc"
 	elem
+		name = "O"
+		command = ".ooc"
+	elem
 		name = "F2+REP"
 		command = ".screenshot auto"
 	elem
@@ -225,10 +228,10 @@ macro "borghotkeymode"
 		name = "CTRL+Southeast"
 		command = "Move-Down"
 	elem
-		name = "-"
+		name = "="
 		command = "Move-Upwards"
 	elem
-		name = "="
+		name = "-"
 		command = "Move-Down"
 
 
@@ -357,6 +360,9 @@ macro "macro"
 		name = "F2"
 		command = ".ooc"
 	elem
+		name = "O"
+		command = ".ooc"
+	elem
 		name = "L"
 		command = ".looc"
 	elem
@@ -417,10 +423,10 @@ macro "macro"
 		name = "CTRL+Southeast"
 		command = "Move-Down"
 	elem
-		name = "-"
+		name = "="
 		command = "Move-Upwards"
 	elem
-		name = "="
+		name = "-"
 		command = "Move-Down"
   elem
     name = "R"
@@ -627,6 +633,9 @@ macro "hotkeymode"
 		name = "F2"
 		command = ".ooc"
 	elem
+		name = "O"
+		command = ".ooc"
+	elem
 		name = "SHIFT+B"
 		command = "rest"
 	elem
@@ -705,10 +714,10 @@ macro "hotkeymode"
 		name = "CTRL+Southeast"
 		command = "Move-Down"
 	elem
-		name = "-"
+		name = "="
 		command = "move-upwards"
 	elem
-		name = "="
+		name = "-"
 		command = "Move-Down"
   elem
     name = "R"
@@ -831,6 +840,9 @@ macro "borgmacro"
 		name = "F2"
 		command = ".ooc"
 	elem
+		name = "O"
+		command = ".ooc"
+	elem
 		name = "L"
 		command = ".looc"
 	elem
@@ -888,10 +900,10 @@ macro "borgmacro"
 		name = "CTRL+Southeast"
 		command = "Move-Down"
 	elem
-		name = "-"
+		name = "="
 		command = "Move-Upwards"
 	elem
-		name = "="
+		name = "-"
 		command = "Move-Down"
 
 

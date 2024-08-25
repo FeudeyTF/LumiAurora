@@ -410,6 +410,9 @@
 
 /mob/var/obj/effect/decal/point/pointing_effect = null//Spam control, can only point when the previous pointer qdels
 
+/mob/verb/point_hotkey()
+
+
 /mob/verb/pointed(atom/A as mob|obj|turf in view())
 	set name = "Point To"
 	set category = "Object"
@@ -951,7 +954,7 @@
 
 
 /mob/verb/westface()
-	set name = "eastface"
+	set name = "westface"
 	set hidden = 1
 	return facedir(client.client_dir(WEST))
 
